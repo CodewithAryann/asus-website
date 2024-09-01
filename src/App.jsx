@@ -1,13 +1,15 @@
 import { Canvas } from '@react-three/fiber';
 import React from 'react'
 import "./style.css"
+import { OrbitControls } from '@react-three/drei';
+import asusContainer from "./asusContainer";
 
 const App = () => {
   return ( 
   <Canvas>
-    <mesh>
+    <OrbitControls/>
       <boxGeometry></boxGeometry>
-    </mesh>
+     <asusContainer></asusContainer>
   </Canvas>
   )
 }
