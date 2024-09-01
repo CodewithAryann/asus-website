@@ -5,6 +5,6 @@ const asusContainer = () => {
   let model = useGLTF("./asus_rog.glb");
   return <primitive object={model.scene}/>;
   
-}
+};
 
 export default asusContainer
