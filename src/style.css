@@ -12,7 +12,7 @@ html, body {
 }
   .canvas-container {
     height: 100vh; 
-    overflow: hidden;
+    overflow: hidden; /* Hide any potential scrollbars */
   }
   
   canvas {

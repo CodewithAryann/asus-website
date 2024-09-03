@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
+
 const AsusContainer = () => {
   const model = useGLTF("./asus_rog.glb"); 
   const meshes = useRef({}); // Use a ref to store mesh references
@@ -26,7 +27,7 @@ const AsusContainer = () => {
   });
 
   return (
-    <group scale={[30, 30, 30]} position={[0, -70, 0]}>
+    <group scale={[25, 25, 25]} position={[0, -90, 0]}>
       <primitive object={model.scene} />
     </group>
   );
