@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import React from 'react';
 import "./style.css";
 import AsusContainer from "./asusContainer"; 
-import { Environment, OrbitControls } from '@react-three/drei';
+import { Environment, OrbitControls, ScrollControls } from '@react-three/drei';
 
 const App = () => {
   return ( 
@@ -10,7 +10,10 @@ const App = () => {
       <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{height: "565px"}}> 
         <OrbitControls />
         <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_08_4k.exr" />
-        <AsusContainer /> 
+        <ScrollControls pages={3}>
+           <AsusContainer /> 
+           </ScrollControls>
+       
       </Canvas>
     </div>
   );
