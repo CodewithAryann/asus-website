@@ -25,7 +25,7 @@ html, body {
 
    .canvas-container {
     position: relative;
-    height: 200vh; /* Make the page scrollable */
+    height: 200vh;
     background-color: #000;
   }
   
