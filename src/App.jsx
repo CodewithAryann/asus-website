@@ -1,29 +1,59 @@
+import React, { useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import React from 'react';
-import "./style.css";
-import AsusContainer from "./asusContainer"; 
-import { Environment, OrbitControls, ScrollControls } from '@react-three/drei';
+import { Environment, OrbitControls } from '@react-three/drei';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import './style.css';
+import AsusContainer from './AsusContainer';
 
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+const startAnimation = (setOpen) => {
+  gsap.to(setOpen, {
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".parent",
+      start: "top center", // Start animation when the top of .parent reaches the center of the viewport
+      end: "bottom center", // End animation when the bottom of .parent reaches the center of the viewport
+      scrub: true,
+      onUpdate: self => {
+        // Update the model state based on the scroll progress
+        const progress = self.progress; // 0 to 1
+        setOpen(progress > 0.5); // Example: Open model when scroll progress is more than 50%
+      }
+    }
+  });
+};
 
 const App = () => {
-  
-  return ( 
-   <div>
-    <div className="canvas-container w-full h-screen">
-      <div className='text-white absolute top-32 left-1/2 -translate-x-1/2'>
-      <h1>AUSU Laptop</h1>
-      </div>
-      <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{height: "565px", position:'fixed'}}> 
-        <OrbitControls enableZoom={false}  />
-        <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_08_4k.exr" />
-           <AsusContainer />     
-      </Canvas>
-    </div>
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    startAnimation(setIsOpen);
+  }, []);
+
+  return (
     <div>
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, impedit minus consectetur veniam delectus eius accusamus! Aliquid velit vel totam molestias unde rem quasi quia possimus veritatis excepturi. Perspiciatis, sequi.</h1>
-    </div>
+      <div className="canvas-container w-full h-screen">
+        <div className='text-white absolute top-32 left-1/2 -translate-x-1/2'>
+          <h1>ASUS Laptop</h1>
+        </div>
+        <div className="w-full">
+          <div className="parent relative left-0 top-0 w-full h-[700vh]">
+            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "565px", position: 'sticky' }}>
+              <OrbitControls enableZoom={false} />
+              <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_08_4k.exr" />
+              <AsusContainer isOpen={isOpen} />
+            </Canvas>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit...</h1>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

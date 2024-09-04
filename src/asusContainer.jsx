@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
-const AsusContainer = () => {
+const AsusContainer = ({ isOpen }) => {
   const model = useGLTF("./asus_rog.glb"); 
   const meshes = useRef({});
   const [scrollY, setScrollY] = useState(0);
@@ -41,9 +41,10 @@ const AsusContainer = () => {
   });
 
   return (
+    <mesh>
     <group scale={[25, 25, 25]} position={[0, -90, 0]}>
       <primitive object={model.scene} />
-    </group>
+    </group></mesh>
   );
 };
 
