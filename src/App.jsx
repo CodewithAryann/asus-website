@@ -50,7 +50,7 @@ const App = () => {
         </div>
       </div>
       <div>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit...</h1>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam molestiae sit maxime sint qui unde ipsam pariatur nulla, iure voluptatem in consequuntur doloribus ullam, est animi quaerat? Doloribus, necessitatibus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis maiores porro sapiente ducimus nisi eos cumque, excepturi voluptas labore dolores ex vitae quisquam aliquam ullam impedit quasi error tempora ut.</h1>
       </div>
     </div>
   );
