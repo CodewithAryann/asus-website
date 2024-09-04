@@ -16,4 +16,5 @@ html, body {
   .asus {
     font-size: 2rem;
     color: white;
+    transform: translate();
   } 

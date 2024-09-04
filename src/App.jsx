@@ -36,7 +36,7 @@ const App = () => {
   return (
     <div>
       <div className="canvas-container w-full h-screen">
-        <div className='text-white absolute top-32 left-1/2 -translate-x-1/2'>
+        <div className='asus-div absolute text-white top-32 left-1/2 -translate-x-1/2'>
           <h1 className='asus'>ASUS Laptop</h1>
         </div>
         <div className="w-full">
