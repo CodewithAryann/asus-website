@@ -12,25 +12,8 @@ html, body {
     margin-top: -24px;
 
 }
-  /* .canvas-container {
-    height: 100vh; 
-    overflow: hidden; 
-  }
-  
-  canvas {
-    height: 100%;
-    width: 100%;
-  }
-   */
-
-   /* .canvas-container {
-    position: relative;
-    height: 200vh;
-    background-color: #000;
-  }
-  
-  h1 {
+ 
+  .asus {
     font-size: 2rem;
-  } */
-   
-  /* style.css */
+    color: white;
+  } 

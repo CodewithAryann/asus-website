@@ -37,7 +37,7 @@ const App = () => {
     <div>
       <div className="canvas-container w-full h-screen">
         <div className='text-white absolute top-32 left-1/2 -translate-x-1/2'>
-          <h1>ASUS Laptop</h1>
+          <h1 className='asus'>ASUS Laptop</h1>
         </div>
         <div className="w-full">
           <div className="parent relative left-0 top-0 w-full h-[700vh]">

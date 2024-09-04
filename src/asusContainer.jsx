@@ -9,24 +9,20 @@ const AsusContainer = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    // Populate the mesh references
     model.scene.traverse((e) => {
       meshes.current[e.name] = e;
     });
 
-    // Set initial rotation for Monitor_7
     if (meshes.current.Monitor_7) {
       meshes.current.Monitor_7.rotation.x = THREE.MathUtils.degToRad(90);
     }
 
-    // Add event listener for window scroll
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup on unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -34,27 +30,22 @@ const AsusContainer = () => {
 
   useFrame(() => {
     if (meshes.current.Monitor_7) {
-      // Calculate scroll percentage based on the parent div's position
       const parent = document.querySelector('.parent');
       const parentTop = parent.offsetTop;
       const parentHeight = parent.offsetHeight;
       const windowHeight = window.innerHeight;
 
-      // Calculate scroll percentage relative to the parent div
       const scrollPercentage = Math.min(
         Math.max((scrollY - parentTop) / (parentHeight - windowHeight), 0),
         1
       );
 
-      // Smoothly interpolate the rotation using easing function
       const targetRotation = THREE.MathUtils.degToRad(90 - scrollPercentage * 90);
       const currentRotation = meshes.current.Monitor_7.rotation.x;
       
-      // Apply easing to the rotation interpolation
-      const smoothFactor = 0.05; // Adjust the smoothing factor for more smoothness
+      const smoothFactor = 0.05;
       meshes.current.Monitor_7.rotation.x += (targetRotation - currentRotation) * smoothFactor;
       
-      // Ensure rotation stays within bounds (0 to 90 degrees)
       meshes.current.Monitor_7.rotation.x = THREE.MathUtils.clamp(
         meshes.current.Monitor_7.rotation.x,
         THREE.MathUtils.degToRad(0),
