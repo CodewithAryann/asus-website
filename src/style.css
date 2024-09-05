@@ -59,6 +59,10 @@ color: blueviolet;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 0 0 4px #ffffffaf;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 1vw;
 }
 
 .asus {
