@@ -36,8 +36,19 @@ const App = () => {
   return (
     <div>
       <div className="canvas-container w-full h-screen">
-        <div className='asus-div absolute text-white top-32 left-1/2 -translate-x-1/2'>
-          <h1 className='asus'>ASUS Laptop</h1>
+        {/* Centering navbar */}
+        <div className="navbar flex gap-5   justify-center items-center">
+          {["iphone", "pad", "services", "ios", "macbook", "products"].map((e) => {
+            return ( 
+              <a key={e} href="#" className=" nav-items text-white">
+                {e}
+              </a>
+            );
+          })}
+        </div>
+        {/* Centering the h1 */}
+        <div className="asus-div absolute text-white top-32 left-1/2 transform -translate-x-1/2">
+          <h1 className="asus text-center text-4xl">ASUS Laptop</h1>
         </div>
         <div className="w-full">
           <div className="parent relative left-0 top-0 w-full h-[700vh]">
