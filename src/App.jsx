@@ -6,7 +6,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import './style.css';
 import AsusContainer from './AsusContainer';
 
-// Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const startAnimation = (setOpen) => {
@@ -14,13 +13,12 @@ const startAnimation = (setOpen) => {
     duration: 1,
     scrollTrigger: {
       trigger: ".parent",
-      start: "top center", // Start animation when the top of .parent reaches the center of the viewport
-      end: "bottom center", // End animation when the bottom of .parent reaches the center of the viewport
+      start: "top center",
+      end: "bottom center", 
       scrub: true,
       onUpdate: self => {
-        // Update the model state based on the scroll progress
-        const progress = self.progress; // 0 to 1
-        setOpen(progress > 0.5); // Example: Open model when scroll progress is more than 50%
+        const progress = self.progress; 
+        setOpen(progress > 0.5); 
       }
     }
   });
@@ -36,20 +34,28 @@ const App = () => {
   return (
     <div>
       <div className="canvas-container w-full h-screen">
-        {/* Centering navbar */}
-        <div className="navbar flex gap-5 justify-center items-center">
-          {["iphone", "pad", "services", "ios", "macbook", "products"].map((e) => {
+        {/* Navbar */}
+        <div className="navbar flex gap-5 justify-center items-center p-4">
+          {/* Logo on the left */}
+          <img src="./Asus.jpg" alt="Logo" className="logo h-10 w-10" />
+
+          {/* Navigation Links */}
+          {["Products", "Innovation", "Downloads", "COMMUNITY", "What's HOT", "Handhelds" ,"Support"].map((e) => {
             return ( 
-              <a key={e} href="#" className=" nav-items text-white">
+              <a key={e} href="#" className="nav-items text-white">
                 {e}
               </a>
             );
           })}
         </div>
-        {/* Centering the h1 */}
+
         <div className="asus-div absolute text-white top-32 left-1/2 transform -translate-x-1/2">
-          <h1 className="asus text-center text-4xl">ASUS Laptop</h1>
+          <h1 className="asus text-center text-4xl">ROG Strix G17 RTX 4060</h1>
+          <h2 className=" text-center text-4xl" >FOR THOSE WHO DARE TRANSCENDENCE</h2>
+          <h3 className=" text-center text-4xl">THE 2024 ROG STRIX HAS ARRIVED</h3>
         </div>
+
+        {/* Canvas with 3D Model */}
         <div className="w-full">
           <div className="parent relative left-0 top-0 w-full h-[700vh]">
             <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "565px", position: 'sticky' }}>
@@ -60,6 +66,8 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      {/* Content */}
       <div>
         <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam molestiae sit maxime sint qui unde ipsam pariatur nulla, iure voluptatem in consequuntur doloribus ullam, est animi quaerat? Doloribus, necessitatibus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis maiores porro sapiente ducimus nisi eos cumque, excepturi voluptas labore dolores ex vitae quisquam aliquam ullam impedit quasi error tempora ut.</h1>
       </div>
