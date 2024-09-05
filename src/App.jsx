@@ -17,18 +17,18 @@ const startAnimation = (setOpen) => {
       end: "bottom center", 
       scrub: true,
       onUpdate: self => {
-        const progress = self.progress; 
-        setOpen(progress > 0.5); 
+        const progress = self.progress;
+        setOpen(progress); // Set the open state based on scroll progress
       }
     }
   });
 };
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [openPercentage, setOpenPercentage] = useState(0);
 
   useEffect(() => {
-    startAnimation(setIsOpen);
+    startAnimation(setOpenPercentage);
   }, []);
 
   return (
@@ -57,11 +57,11 @@ const App = () => {
 
         {/* Canvas with 3D Model */}
         <div className="w-full">
-          <div className="parent relative left-0 top-0 w-full h-[700vh]">
-            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "565px", position: 'sticky' }}>
+          <div className="parent relative left-0 top-0 w-full">
+            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "320px", position: 'sticky' }}>
               <OrbitControls enableZoom={false} />
               <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_08_4k.exr" />
-              <AsusContainer isOpen={isOpen} />
+              <AsusContainer openPercentage={openPercentage} />
             </Canvas>
           </div>
         </div>
