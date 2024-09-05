@@ -37,7 +37,7 @@ const App = () => {
     <div>
       <div className="canvas-container w-full h-screen">
         {/* Centering navbar */}
-        <div className="navbar flex gap-5   justify-center items-center">
+        <div className="navbar flex gap-5 justify-center items-center">
           {["iphone", "pad", "services", "ios", "macbook", "products"].map((e) => {
             return ( 
               <a key={e} href="#" className=" nav-items text-white">
