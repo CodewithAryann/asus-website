@@ -48,6 +48,9 @@ const App = () => {
             );
           })}
         </div>
+        <div className='note bg-red-600 w-full'>
+          <p>First Order Rewards: AED 200 Delight on ASUS eShop!</p>
+        </div>
 
         <div className="asus-div absolute text-white top-32 left-1/2 transform -translate-x-1/2">
           <h1 className="asus text-center text-4xl">ROG Strix G17 RTX 4060</h1>
