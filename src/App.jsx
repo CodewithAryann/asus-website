@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import './style.css';
 import AsusContainer from './AsusContainer';
+import Explore from './Explore';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +19,7 @@ const startAnimation = (setOpen) => {
       scrub: true,
       onUpdate: self => {
         const progress = self.progress;
-        setOpen(progress); // Set the open state based on scroll progress
+        setOpen(progress); 
       }
     }
   });
@@ -34,12 +35,8 @@ const App = () => {
   return (
     <div>
       <div className="canvas-container w-full h-screen">
-        {/* Navbar */}
         <div className="navbar flex gap-5 justify-center items-center p-4">
-          {/* Logo on the left */}
           <img src="./Asus.jpg" alt="Logo" className="logo h-10 w-10" />
-
-          {/* Navigation Links */}
           {["Products", "Innovation", "Downloads", "COMMUNITY", "What's HOT", "Handhelds" ,"Support"].map((e) => {
             return ( 
               <a key={e} href="#" className="nav-items text-white">
@@ -58,10 +55,9 @@ const App = () => {
           <h3 className=" text-center text-4xl">THE 2024 ROG STRIX HAS ARRIVED</h3>
         </div>
 
-        {/* Canvas with 3D Model */}
         <div className="w-full">
           <div className="parent relative left-0 top-0 w-full">
-            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "320px", position: 'sticky' }}>
+            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "330px", position: 'sticky' }}>
               <OrbitControls enableZoom={false} />
               <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_08_4k.exr" />
               <AsusContainer openPercentage={openPercentage} />
@@ -69,11 +65,7 @@ const App = () => {
           </div>
         </div>
       </div>
-
-      {/* Content */}
-      <div>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam molestiae sit maxime sint qui unde ipsam pariatur nulla, iure voluptatem in consequuntur doloribus ullam, est animi quaerat? Doloribus, necessitatibus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis maiores porro sapiente ducimus nisi eos cumque, excepturi voluptas labore dolores ex vitae quisquam aliquam ullam impedit quasi error tempora ut.</h1>
-      </div>
+<Explore/>
     </div>
   );
 };

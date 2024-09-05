@@ -35,7 +35,7 @@ const AsusContainer = ({ openPercentage }) => {
   });
 
   return (
-    <group scale={[30, 30, 30]} position={[0, -80, 0]}>
+    <group scale={[30, 30, 30]} position={[0, -85, 0]}>
       <primitive object={model.scene} />
     </group>
   );
