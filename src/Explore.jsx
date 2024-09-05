@@ -18,7 +18,7 @@ export default function App() {
   };
   return (
     <>
-    <div><h1>EXPLORE OUR PRODUCTS</h1></div>
+    <div className='explore'><h1>EXPLORE OUR PRODUCTS</h1></div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

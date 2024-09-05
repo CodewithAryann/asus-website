@@ -175,3 +175,13 @@ color: blueviolet;
   transform: rotate(-90deg);
 }
 
+.explore{
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: -23px;
+}
+.explore h1{
+  margin-bottom: 0%;
+  padding-bottom: 2vw;
+}

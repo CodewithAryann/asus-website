@@ -57,7 +57,7 @@ const App = () => {
 
         <div className="w-full">
           <div className="parent relative left-0 top-0 w-full">
-            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "330px", position: 'sticky' }}>
+            <Canvas camera={{ fov: 50, position: [0, 2, 120] }} style={{ height: "330px", position: 'sticky', backgroundColor:"black" }}>
               <OrbitControls enableZoom={false} />
               <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/studio_small_08_4k.exr" />
               <AsusContainer openPercentage={openPercentage} />
