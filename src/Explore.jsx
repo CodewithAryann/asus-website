@@ -34,15 +34,12 @@ export default function App() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><img src="./slide.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="./slide-2.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="./slide-3.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="./slide-4.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="./slide-5.webp" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="./slide-6.jpg" alt="" /></SwiperSlide>
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
             <circle cx="24" cy="24" r="20"></circle>
