@@ -183,3 +183,30 @@ color: blueviolet;
   margin-bottom: 0%;
   padding-bottom: 2vw;
 }
+
+/* Change the pagination and navigation arrow colors to #470176 */
+.swiper-pagination-bullet {
+  background-color: #470176;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #470176;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #470176 !important;
+  font-size: 28px !important;
+  font-weight: 1000 !important; /* Make the arrows thinner */
+}
+
+.autoplay-progress circle {
+  stroke: #470176;
+}
+
+
+.autoplay-progress span {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
