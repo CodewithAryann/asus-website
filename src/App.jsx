@@ -8,6 +8,7 @@ import AsusContainer from "./AsusContainer";
 import Explore from "./Explore";
 import Living from "./living";
 import Actions from "./Actions";
+import Story from "./Story";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -90,6 +91,7 @@ const App = () => {
       <Explore />
       <Living/>
       <Actions/>
+      <Story/>
     </div>
   );
 };
