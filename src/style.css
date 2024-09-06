@@ -116,6 +116,7 @@ color: blueviolet;
   margin: 0;
   display: flex;
   margin-top: 1vw;
+  cursor: pointer;
 }
 .note p{
   margin: 0%;
@@ -184,7 +185,6 @@ color: blueviolet;
   padding-bottom: 2vw;
 }
 
-/* Change the pagination and navigation arrow colors to #470176 */
 .swiper-pagination-bullet {
   background-color: #470176;
 }
@@ -197,7 +197,7 @@ color: blueviolet;
 .swiper-button-prev {
   color: #470176 !important;
   font-size: 28px !important;
-  font-weight: 1000 !important; /* Make the arrows thinner */
+  font-weight: 1000 !important; 
 }
 
 .autoplay-progress circle {

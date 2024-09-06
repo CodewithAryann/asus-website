@@ -2,13 +2,15 @@
     background-image: url('/rog_bg.jpg');
     background-size: cover;
     background-position: center;
-    margin-top: -22px;
+    margin-top: -22px; 
+    padding-bottom: 3vw;
 }
 .action h1{
     padding-top: 4vw;
 }
 .container {
     padding: 50px;
+    padding-top: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;

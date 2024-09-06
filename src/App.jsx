@@ -7,6 +7,8 @@ import "./style.css";
 import AsusContainer from "./AsusContainer";
 import Explore from "./Explore";
 import Living from "./living";
+import Actions from "./Actions";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +56,7 @@ const App = () => {
             );
           })}
         </div>
-        <div className="note bg-red-600 w-full">
+        <div className="note w-full">
           <p>First Order Rewards: AED 200 Delight on ASUS eShop!</p>
         </div>
 
@@ -87,6 +89,7 @@ const App = () => {
       </div>
       <Explore />
       <Living/>
+      <Actions/>
     </div>
   );
 };
