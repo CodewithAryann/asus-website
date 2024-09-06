@@ -9,6 +9,7 @@ import Explore from "./Explore";
 import Living from "./living";
 import Actions from "./Actions";
 import Story from "./Story";
+import Footer from "./footer";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -92,6 +93,7 @@ const App = () => {
       <Living/>
       <Actions/>
       <Story/>
+      <Footer/>
     </div>
   );
 };
