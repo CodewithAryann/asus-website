@@ -5,6 +5,7 @@
     background-position: center; /* Center the background image */
     padding: 40px 20px; /* Padding around the footer content */
     color: #ffffff; /* Default text color */
+    height: 20vw;
   }
   
 .footer-links{
@@ -17,4 +18,18 @@
     display: flex;
     gap: 20%;
     width: 97%;
+}
+.line{
+    height: 1px;
+    background-color: #4d4d4d;
+    margin: 0 auto;
+    margin-left: 39px;
+}
+.line::before{
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 10px;
+    position: absolute;
+    width: 50px;
 }
