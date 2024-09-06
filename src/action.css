@@ -9,53 +9,120 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* Container for the entire section */
 .action-div {
-  text-align: center; /* Center-align the heading */
-  padding: 40px 20px; /* Add padding around the container */
-  background-color: #f5f5f5; /* Light background color for contrast */
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5; 
 }
 
-/* Heading styling */
 .action-div h1 {
-  margin-bottom: 30px; /* Space between heading and content */
-  font-size: 2.5rem; /* Larger font size for the heading */
-  color: #333; /* Darker color for the heading text */
+  margin-bottom: 30px; 
+  font-size: 2.5rem; 
+  color: black; 
 }
 
-/* Flex container for the items */
 .action-items {
-  display: flex; /* Align children horizontally */
-  justify-content: center; /* Center items horizontally */
-  gap: 15px; /* Reduced space between items */
-  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  display: flex; 
+  justify-content: center; 
+  gap: 64px;
+  flex-wrap: wrap; 
+  cursor: pointer;
 }
 
-/* Individual item styling */
 .action-item {
-  flex: 1; /* Allow items to grow and fill available space */
-  max-width: 300px; /* Limit the width of each item */
-  text-align: center; /* Center text inside each item */
-  transition: transform 0.3s ease; /* Smooth transition effect */
+  flex: 1;
+  max-width: 300px; 
+  text-align: center; 
+  transition: transform 0.3s ease; 
 }
 
 .action-item:hover {
-  transform: scale(1.05); /* Slightly enlarge item on hover */
+  transform: scale(1.05);
 }
 
-/* Image styling */
+
 .action-item img {
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove extra space below images */
-  margin-bottom: 10px; /* Reduced space between image and text */
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  margin-bottom: 10px; 
 }
 
 /* Text styling */
 .action-item h3, .action-item p {
-  transition: color 0.3s ease; /* Smooth transition effect for color */
+  transition: color 0.3s ease;
 }
 
 .action-item:hover h3, .action-item:hover p {
-  color: #6a0dad; /* Change text color to purple on hover */
+  color: #470176; 
 }
+.action-item h3{
+  color: #000;
+}
+
+  .btn {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: block;
+    margin-top: 4vw;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #750ada;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.btn span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #000000;
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.btn svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #000000;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.btn:hover:before {
+    width: 100%;
+    background: #750ada;
+}
+
+.btn:hover span {
+    color: #ffffff; /* Change text color to black */
+}
+
+.btn:hover svg {
+    transform: translateX(0);
+    stroke: #ffffff; /* Change SVG stroke color to black */
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
