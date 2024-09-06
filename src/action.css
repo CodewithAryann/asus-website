@@ -92,7 +92,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #000000;
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    transition: color 0.3s ease; 
 }
 
 .btn svg {
@@ -114,12 +114,13 @@ body {
 }
 
 .btn:hover span {
-    color: #ffffff; /* Change text color to black */
+    color: #ffffff; 
+    text-shadow: none;
 }
 
 .btn:hover svg {
     transform: translateX(0);
-    stroke: #ffffff; /* Change SVG stroke color to black */
+    stroke: #ffffff; 
 }
 
 .btn:active {
