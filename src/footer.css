@@ -33,3 +33,56 @@
     position: absolute;
     width: 50px;
 }
+
+/* General styling for all footer elements */
+.footer * {
+    color: #b3b3b3; /* Default color */
+    fill: #b3b3b3; /* Default SVG color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, fill 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer on hover */
+  }
+  
+  /* Hover effect for all footer elements */
+  .footer *:hover {
+    color: #750ada; /* Hover effect for text and links */
+    fill: #750ada;  /* Hover effect for SVGs */
+  }
+  
+  /* Specifically targeting the links (a) and svg tags */
+  .footer a,
+  .footer svg {
+    color: #b3b3b3; /* Default link color */
+    fill: #b3b3b3;  /* Default SVG color */
+    text-decoration: none; /* Ensure no underline */
+  }
+  
+  /* Hover effect for links and SVGs */
+  .footer a:hover,
+  .footer svg:hover {
+    color: #750ada; /* Hover effect color for links */
+    fill: #750ada;  /* Hover effect color for SVGs */
+  }
+  
+  /* Middle East/English section */
+  .footer div p,
+  .footer div svg {
+    color: #b3b3b3; /* Default color for Middle East/English text and icon */
+    fill: #b3b3b3;
+    transition: color 0.3s, fill 0.3s; /* Smooth transition */
+  }
+  
+  /* Hover effect for Middle East/English */
+  .footer div p:hover,
+  .footer svg:hover {
+    color: #750ada; /* Hover effect for Middle East/English text */
+    fill: #750ada;  /* Hover effect for SVG icon */
+  }
+  
+  /* Language section with both text and svg */
+  .footer div:hover p,
+  .footer div:hover svg {
+    color: #750ada; /* Hover effect for language text */
+    fill: #750ada; 
+  }
+  
