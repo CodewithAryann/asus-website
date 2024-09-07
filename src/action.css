@@ -48,7 +48,6 @@ body {
   margin-bottom: 10px; 
 }
 
-/* Text styling */
 .action-item h3, .action-item p {
   transition: color 0.3s ease;
 }
