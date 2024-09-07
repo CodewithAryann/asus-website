@@ -1,0 +1,39 @@
+/* Ensure dropdown is hidden by default */
+.dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    background-color: #ffffff; /* Set background color to white */
+    z-index: 10; /* Ensure the dropdown is above other elements */
+    position: absolute;
+    margin-top: 0.5rem; /* or adjust as needed */
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px; /* Ensure dropdown has enough width */
+  }
+  
+  /* Show dropdown on hover with smooth transition */
+  .relative:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dropdown a {
+    display: block;
+    color: #000000; /* Set text color to black */
+    padding: 0.5rem;
+    text-decoration: none;
+    font-weight: 500; /* Increase font weight */
+  }
+  
+  .dropdown a:hover {
+    background-color: #f0f0f0; /* Slightly different hover color for contrast */
+    color: #800080; /* Change text color to purple on hover */
+  }
+  
+  /* Ensure the hover area is large enough */
+  .relative {
+    position: relative; /* Ensure the dropdown is positioned relative to this element */
+  }
+  

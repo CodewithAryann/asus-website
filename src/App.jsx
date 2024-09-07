@@ -10,6 +10,7 @@ import Living from "./living";
 import Actions from "./Actions";
 import Story from "./Story";
 import Footer from "./footer";
+import Nav from "./Nav";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,24 +41,7 @@ const App = () => {
   return (
     <div>
       <div className="canvas-container w-full h-screen">
-        <div className="navbar flex gap-5 justify-center items-center p-4">
-          <img src="./Asus.jpg" alt="Logo" className="logo h-10 w-10" />
-          {[
-            "Products",
-            "Innovation",
-            "Downloads",
-            "COMMUNITY",
-            "What's HOT",
-            "Handhelds",
-            "Support",
-          ].map((e) => {
-            return (
-              <a key={e} href="#" className="nav-items text-white">
-                {e}
-              </a>
-            );
-          })}
-        </div>
+          <Nav/>
         <div className="note w-full">
           <p>First Order Rewards: AED 200 Delight on ASUS eShop!</p>
         </div>
