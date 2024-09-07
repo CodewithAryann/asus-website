@@ -47,7 +47,7 @@ const App = () => {
         </div>
 
         <div className="asus-div absolute text-white top-32 left-1/2 transform -translate-x-1/2">
-          <h1 className="asus text-center text-4xl">ROG Strix G17 RTX 4060</h1>
+          <h1 style={{cursor:"default"}} className="asus text-center text-4xl">ROG Strix G17 RTX 4060</h1>
           <h2 className=" text-center text-4xl">
             FOR THOSE WHO DARE TRANSCENDENCE
           </h2>
