@@ -21,19 +21,18 @@
   
   .dropdown a {
     display: block;
-    color: #000000; /* Set text color to black */
+    color: #000000; 
     padding: 0.5rem;
     text-decoration: none;
-    font-weight: 500; /* Increase font weight */
+    font-weight: 500; 
   }
   
   .dropdown a:hover {
-    background-color: #f0f0f0; /* Slightly different hover color for contrast */
-    color: #810bd1; /* Change text color to purple on hover */
+    background-color: #f0f0f0;
+    color: #810bd1; 
   }
   
-  /* Ensure the hover area is large enough */
   .relative {
-    position: relative; /* Ensure the dropdown is positioned relative to this element */
+    position: relative;
   }
   

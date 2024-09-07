@@ -6,8 +6,8 @@ const Nav = () => {
   const navItems = [
     { name: "Products", dropdown: ["Laptops", "Desktops", "Monitors"] },
     { name: "Innovation", dropdown: ["AI", "Gaming", "VR"] },
-    { name: "Downloads", dropdown: ["Drivers", "Manuals", "Software"] },
-    { name: "COMMUNITY", dropdown: ["Forums", "Events", "Blog"] },
+    { name: "Downloads", dropdown: ["ROG Opera GX", "Wallpapers", "Aura Sync"] },
+    { name: "COMMUNITY", dropdown: ["News", "Events", "Blog"] },
     { name: "What's HOT", dropdown: ["Trending", "New Arrivals", "Best Sellers"] },
     { name: "Handhelds", dropdown: ["ROG Ally", "Zenfone"] },
     { name: "Support", dropdown: ["Customer Service", "Warranty", "Repair"] }
